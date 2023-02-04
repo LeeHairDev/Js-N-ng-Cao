@@ -1,14 +1,15 @@
 import './style.css'
-import Navigo from 'navigo';
 // lấy dữ liệu từ bên file contact export  ra 
- import { arrContact } from "./page/contact";  // Đây là kiểu lấy dữ liệu của export thường
-import Contact from "./page/contact"; // Đây là kiểu lấy dữ liệu của export default 
-import Homepage from "./page/home";
-import Aboutpage from "./page/about";
-import Categorypage from "./page/category";
-import Postpage from "./page/post";
-import PostDetailpage from "./page/post-detail";
+ // import { arrContact } from "./page/contact-page";  // Đây là kiểu lấy dữ liệu của export thường
+import Contact from "./page/contact-page"; // Đây là kiểu lấy dữ liệu của export default 
+import Homepage from "./page/home-page";
+import Aboutpage from "./page/about-page";
+import Categorypage from "./page/category-page";
+import Postpage from "./page/post-page";
+import PostDetailpage from "./page/post-detail-page";
+import Projectpage from "./page/project-page";
 
+import { router } from "./libs";
 
 const render = (container,content)=>{
     container.innerHTML = content();
@@ -17,12 +18,9 @@ const render = (container,content)=>{
 let app = document.querySelector('#app');
 app.innerHTML = Contact();
 
-const [start, ,end] = arrContact;
-
-console.log(start, end);
 
 // Nhảy trang không bị load lại 
-const router = new Navigo("/",{linksSelector: "a"});
+
 
 router.on({
   "/": () => render(app, Homepage),
@@ -31,6 +29,7 @@ router.on({
   "/Category": () => render(app, Categorypage),
   "/Post": () => render(app, Postpage),
   "/PostDetail": () => render(app, PostDetailpage),
+  "/Project": () => render(app, Projectpage),
 });
 
 router.resolve();

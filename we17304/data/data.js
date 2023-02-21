@@ -1,46 +1,46 @@
 const projectList = [
   {
     id: 1,
-    name: "Project 1",
+    name: "BachHoaXanh Page",
+    link: "img/z4125240332619_c8bca6541058358ec5381e4ec6e53dea.jpg",
+    language: "Html, Css, React Js, Node Js",
+    content:
+      "This website was created to serve users on the topics of food, and buying and selling",
   },
   {
     id: 2,
-    name: "Project 2",
+    name: "HoatHinh3d Page",
+    link: "img/z4125240333259_efe7760d33eea9ae8deb8d3c1924b27d.jpg",
+    language: "Html, Css, React Js, Node Js",
+    content:
+      "This website was created to serve users on the topics of Cartoons for all ages and buying and selling.",
   },
   {
-    id: 3,
-    name: "Project 3",
+    id: 5,
+    name: "MediaMart Page",
+    link: "img/z4125240332218_7a1935731fae6bccd8a5853c77c5ad84.jpg",
+    language: "Html, Css, React Js, Node Js",
+    content:
+      "This website was created to serve users on the topics of household items and buying and selling.",
   },
 ];
 
 const menuList = [
   {
     name: "Home",
-    path: "/",
-  },
-  {
-    name: "Post",
-    path: "/Post",
-  },
-  {
-    name: "About",
-    path: "/About",
-  },
-  {
-    name: "Contact",
-    path: "/Contact",
-  },
-  {
-    name: "PostDetail",
-    path: "/PostDetail",
+    path: "/#home",
   },
   {
     name: "Category",
-    path: "/Category",
+    path: "/#about",
   },
   {
     name: "Project",
-    path: "/Project",
+    path: "/#myproject",
+  },
+  {
+    name: "Contact",
+    path: "/#contact",
   },
 ];
 export { projectList, menuList };
